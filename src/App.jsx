@@ -11,8 +11,10 @@ export default function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const buttons = ['good', 'neutral', 'bad'];
-  const total = good + neutral + bad;
+    const feedback = { good, neutral, bad };
+    const buttons = Object.keys(feedback);
+    // const total = good + neutral + bad;
+    const total = Object.values(feedback).reduce((acc, val) => acc + val);
 
   const countPositiveFeedbackPercentage = () => {
     return Math.round((good / (good + neutral + bad)) * 100);
@@ -60,6 +62,5 @@ export default function App() {
       </Section>
     );
   }
-
 
 
