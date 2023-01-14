@@ -20,7 +20,7 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
         </>
     );
 }
-FeedbackOptions.prototype = {
-    buttons: PropTypes.arrayOf(PropTypes.string.isRequired),
+FeedbackOptions.propTypes = {
+    option: PropTypes.arrayOf(PropTypes.string.isRequired),
     onLeaveFeedback: PropTypes.func.isRequired,
 };

@@ -4,7 +4,7 @@ export default function Notification({ text }) {
   return <p>{text}</p>;
 }
 
-Notification.prototype = {
+Notification.propTypes = {
     message: PropTypes.string.isRequired,
 };
 
